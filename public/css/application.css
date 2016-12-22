@@ -1,0 +1,99 @@
+.container {
+  margin: 20px auto;
+  width: 800px;
+  padding: 0px 20px 20px 20px;
+  border: 1px dotted black;
+}
+
+.container h1 {
+  font-size: 17pt;
+
+}
+
+nav {
+  width: 100%;
+  height: 40px;
+  font-weight: bold;
+}
+
+nav .brand, nav .brand a {
+  margin-left: 25px;
+  font-size: 18pt;
+  text-decoration: none;
+  color: #444;
+  width: 60%;
+  display: inline-block;
+}
+
+nav ul {
+  display: inline-block;
+  width: 30%;
+  text-align: right;
+}
+
+nav li {
+  margin-right: 25px;
+  display: inline;
+}
+
+nav li a {
+  color: gray;
+  text-decoration: none;
+}
+
+nav li a:hover {
+  text-decoration: underline;
+}
+
+form label {
+  font-weight: bold;
+  margin-right: 20px;
+}
+
+input {
+  margin-bottom: 10px;
+}
+
+.errors {
+  color: red;
+}
+
+form.quirks {
+  display: inline-block;
+}
+
+.submit {
+  text-align: center;
+}
+
+.label {
+  font-weight: bold;
+  float: left;
+  text-align: right;
+  margin-right: 20px;
+  width: 200px;
+}
+
+body {
+    background-image: url("big.jpg");
+    color: white;
+}
+
+h1, h2, h3, h4, p {
+    text-align: center;
+}
+
+h1, h2, h3, h4 { color: #ffffff; font-family: 'Lato', sans-serif; font-size: 54px; font-weight: 300; line-height: 58px; margin: 0 0 58px; }
+
+
+p { color: #adb7bd; font-family: 'Lucida Sans', Arial, sans-serif; font-size: 30px; line-height: 26px; text-indent: 30px; margin: 0; }
+
+
+a { color: #fe921f; text-decoration: underline; }
+
+
+a:hover { color: #ffffff}
+
+
+.date { background: #fe921f; color: #ffffff; display: inline-block; font-family: 'Lato', sans-serif; font-size: 12px; font-weight: bold; line-height: 12px; letter-spacing: 1px; margin: 0 0 30px; padding: 10px 15px 8px; text-transform: uppercase; }
+

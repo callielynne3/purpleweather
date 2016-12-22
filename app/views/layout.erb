@@ -14,8 +14,8 @@
     <% if current_user %>
        <a href="/users/<%= current_user.id %>"><%= current_user.first_name %>'s Profile</a>
        <a href="/">Home</a>
-       <a href="/users/<%= @user.id %>/edit">Edit Account</a>
-      <form action="/users/<%= @user.id %>" method="post">
+       <a href="/users/<%= current_user.id %>/edit">Edit Account</a>
+      <form action="/users/<%= current_user.id %>" method="post">
          <input type="hidden" name="_method" value="delete" />
          <input type="submit" value="delete account" />
        </form>

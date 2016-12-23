@@ -1,22 +1,22 @@
-get '/session-viewer' do
-     session.inspect
+# show login form 
+get '/sessions/new' do
+  erb :'/sessions/new'
 end
 
-get '/login' do
-  erb :'/sessions'
-end
-
+# post login form 
 post '/sessions' do
-  @user = User.find_by(email: params[:email])
-  if @user.password = params[:hashed_password]
-    login(@user)
-    redirect"/users/#{session[:user_id]}"
-  else
-    erb :'/sessions'
+  @user = User.find_by_email(params[:email])
+  if @user && @user.password == params[:password]
+    session[:user_id] = @user.id
+    @current_user = @user.id
+    redirect "/users/#{@user.id}"
+  else 
+    @errors = ["Email or password did not match."]
+    erb :'sessions/new'
   end
 end
 
-delete '/logout' do
-  logout
+delete '/sessions' do
+  log_out if logged_in?
   redirect '/'
 end

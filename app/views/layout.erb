@@ -7,28 +7,21 @@
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script src="/js/application.js?app=skills"></script>
 
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
   <title></title>
 </head>
 <body>
-<header>
-    <% if current_user %>
-       <a href="/users/<%= current_user.id %>"><%= current_user.first_name %>'s Profile</a>
-       <a href="/">Home</a>
-       <a href="/users/<%= current_user.id %>/edit">Edit Account</a>
-      <form action="/users/<%= current_user.id %>" method="post">
-         <input type="hidden" name="_method" value="delete" />
-         <input type="submit" value="delete account" />
-       </form>
-       <form action="/logout" method="post">
-         <input type="hidden" name="_method" value="delete" />
-         <input type="submit" class="sign-out-link" value="sign out" />
-       </form>
-     <% else %>
-       <a href="/">Home</a>
-       <a href="/login">Login</a>
-       <a href="/users/new">Sign Up</a>
-     <% end %>
-  </header>
+<%= erb :'partials/_navbar' %>
+  <div class="container">
   <%= yield %>
+</div>
 </body>
 </html>

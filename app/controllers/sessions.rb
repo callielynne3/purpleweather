@@ -1,9 +1,7 @@
-# show login form 
 get '/sessions/new' do
   erb :'/sessions/new'
 end
 
-# post login form 
 post '/sessions' do
   @user = User.find_by_email(params[:email])
   if @user && @user.password == params[:password]

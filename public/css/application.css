@@ -1,38 +1,121 @@
-#my-id {
-  background-color: #39175a;
-  color: #F8F8FF;
+#move-right {
+  padding: 15px;
 }
 
-body {
-  width: 100%;
-  height: 100%;
-  background: #948E99; background: -webkit-linear-gradient(to left, #948E99 , #2E1437); 
-  background: linear-gradient(to left, #948E99 , #2E1437);
-  color: white;
+.navbar-brand {
+  margin-bottom:0;
+  border:none;
 }
 
-#my-picture {
-  left: 0;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  opacity: .5;
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
+.navbar-brand .glyphicon {
+  margin-right:6px;
 }
 
-#about {
-  margin: 0 auto !important;
-  width: 700px;
-  opacity: 1;
-  z-index: 1;
-  color: #fff !important;
-  padding-top: 280px;
-  text-shadow: 2px 2px black;
+.hero {
+  background-size:cover;
+  border:none;
 }
 
-.page-title {
-  color: white;
+@media (min-width:992px) {
+  .hero .get-it {
+    text-align:right;
+    margin-top:80px;
+    padding-right:30px;
+  }
+}
+
+@media (max-width:992px) {
+  .hero .get-it {
+    text-align:center;
+  }
+}
+
+@media (max-width:992px) {
+  .hero .phone-preview {
+    text-align:center;
+  }
+}
+
+.hero .get-it h1, .hero .get-it p {
+  color:#fff;
+  text-shadow:2px 2px 3px rgba(0,0,0,0.3);
+  margin-bottom:40px;
+}
+
+.hero .get-it .btn {
+  margin-left:10px;
+  margin-bottom:10px;
+  text-shadow:none;
+}
+
+
+.icon-feature {
+  text-align:center;
+}
+
+.icon-feature .glyphicon {
+  font-size:60px;
+}
+
+section.features {
+  background-color:#369;
+  padding:40px 0;
+  color:#fff;
+}
+
+.features h2 {
+  color:#fff;
+}
+
+.features .icon-features {
+  margin-top:15px;
+}
+
+.testimonials blockquote {
+  text-align:center;
+}
+
+section.testimonials {
+  margin:50px 0;
+}
+
+.site-footer {
+  padding:20px 0;
+  text-align:center;
+}
+
+@media (min-width:768px) {
+  .site-footer h5 {
+    text-align:left;
+  }
+}
+
+.site-footer h5 {
+  color:inherit;
+  font-size:20px;
+}
+
+.site-footer .social-icons a:hover {
+  opacity:1;
+}
+
+.site-footer .social-icons a {
+  display:inline-block;
+  width:32px;
+  border:none;
+  font-size:20px;
+  border-radius:50%;
+  margin:4px;
+  color:#fff;
+  text-align:center;
+  background-color:#798FA5;
+  height:32px;
+  opacity:0.8;
+  line-height:32px;
+}
+
+@media (min-width:768px) {
+  .site-footer .social-icons {
+    text-align:right;
+  }
 }

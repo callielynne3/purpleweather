@@ -1,1 +1,8 @@
 <h1>Welcome, <%= @user.first_name%>!</h1>
+<ul style="list-style: none">
+<li id="move-right"><a href="/users/<%= current_user.id%>/edit">Edit Account</a></li>
+<li><form class="delete-account" action="/users/<%= current_user.id %>" method="POST">
+  <input name="_method" type="hidden" value="DELETE">
+  <input type="submit" class="btn btn-link" value="Delete Account">
+</form></li>
+</ul>

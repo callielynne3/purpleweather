@@ -5,10 +5,10 @@
     </div>
     <ul class="nav navbar-nav">
       <li><a href="/">Home</a></li>
-      <% if session[:user_id] %>
+      <li><a href="/ryu">Hadouken</a></li>
+      <% if current_user %>
       <li><a href="/weather_reports/new">New Weather</a></li>
-      <li><a href="/users/:id/edit">Edit Account</a></li>
-      <li><a href="/users/:id">Delete Account</a></li>
+      <li><a href="/users/<%= current_user.id %>">Profile</a></li>
         <form class="navbar-form navbar-right" action="/sessions" method="POST"><input name="_method" type="hidden" value="DELETE"><input type="submit" class="btn btn-link" value="Logout"></form>
       <% else %>
         <form class="navbar-form navbar-right" action="/sessions/new">
@@ -21,3 +21,6 @@
     </ul>
   </div>
 </nav>
+
+
+

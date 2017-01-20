@@ -21,6 +21,8 @@ require "sinatra/reloader" if development?
 
 
 require 'erb'
+require 'dotenv/load'
+
 require 'forecast_io'
 require 'area'
 
@@ -37,8 +39,10 @@ Dir[APP_ROOT.join('app', 'helpers', '*.rb')].each { |file| require file }
 # Set up the database and models
 require APP_ROOT.join('config', 'database')
 
+p ENV['WEATHERKEY']
+
 #forecast.io gem/api
 ForecastIO.configure do |configuration|
- configuration.api_key = 'dc6c252c8552e7eb8d0b61de74d8e2ce'
+ configuration.api_key = ENV['WEATHERKEY']
 end
 

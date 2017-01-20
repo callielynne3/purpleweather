@@ -1,5 +1,3 @@
-# @weather = ForecastIO.forecast(37.8267, -122.423)
-
 helpers do 
 	def clothes
 	possible_reports = {
@@ -7,10 +5,10 @@ helpers do
 		"clear-night" => "Wear your party clothes, because it's a nice night to hit the town in that cute outfit 👠🎩",
 		"rain" => "GETCHA UMBRELLA AND RAIN BOOTS CAUSE YOU GON' BE WET 🌂🌧",
 		"snow" => "Get your hot coco cup ready, and wear the biggest coat in your house that you can find ❄️☃️⛸🎿",
-		"sleet" => "SLEET?! Even more wetness - wear your rain boots, and a poncho, shit's going down in the sky 🌫",
+		"sleet" => "SLEET?! ALL the wetness - wear your rain boots, and a poncho, shit's going down in the sky 🌫",
 		"wind" => "DO NOT, and I repeat, DO NOT wear a skirt today. Bundle up with a wind breaker and some closed toed shoes 🌬",
 		"fog" => "It will be a little crisp due to the fog today, so bundle up in a comfy sweater and jeans - but the fog wears off, so remeber to wear something under the sweater 😜",
-		"cloudy" => "Lay off the sanalds and crop tops, today is a cloudy day! Stay close to your sweaters and hoodies ☁️☁️☁️☁️☁️☁️☁️",
+		"cloudy" => "Lay off the sandals and crop tops, today is a cloudy day! Stay close to your sweaters and hoodies ☁️☁️☁️☁️☁️☁",
 		"partly-cloudy-day" => "It's colder right now, but it could warm up later. Wear something cozy and warm, but make sure you have layers to take off for later 🙆",
 		"partly-cloudy-night" => "If you're trying to party tonight, definitely bring a jacket🌙",
 		"hail" => "Screw the clothes, go park your car under something so those golf balls outside don't cost you a leg and an arm in auto work 🚗",

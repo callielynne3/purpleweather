@@ -1,7 +1,8 @@
- <div id="my-picture">
+<div id="my-picture">
   <% if session[:user_id] %>
     <h2 id="about">Hi <%= current_user.first_name %>! Welcome to Purple Weather! A way to help you decide what to wear based on temperatures in your area.</h2>
   <% else %>
-    <h2 id="about">Welcome to Purple Weather! A way to help you decide what to wear based on temperatures in your area.</h2>
+    <h1 id="about">Purple Weather</h1>
+    <h2>A way to help you decide what to wear based on temperatures in your area.</h2>
   <% end %>
 </div>

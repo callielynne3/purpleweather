@@ -11,9 +11,6 @@ gem 'thin'
 gem 'activesupport', "~>4.2"
 gem 'activerecord', "~>4.2"
 
-# gem 'rails'
-# gem 'rspec-rails'
-# gem 'rails_12factor'
 gem 'rake'
 gem 'bcrypt'
 

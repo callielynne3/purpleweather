@@ -14,19 +14,31 @@ GEM
       minitest (~> 5.1)
       thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
-    arel (6.0.3)
+    area (0.10.0)
+      fastercsv (~> 1.5)
+    arel (6.0.4)
     backports (3.6.8)
     bcrypt (3.1.11)
-    builder (3.2.2)
+    builder (3.2.3)
     daemons (1.2.4)
-    diff-lcs (1.2.5)
+    diff-lcs (1.3)
+    dotenv (2.1.2)
     eventmachine (1.2.1)
-    faker (1.6.6)
+    faker (1.7.2)
       i18n (~> 0.5)
+    faraday (0.11.0)
+      multipart-post (>= 1.2, < 3)
+    fastercsv (1.5.5)
+    forecast_io (2.0.1)
+      faraday
+      hashie
+      multi_json
+    hashie (3.4.6)
     i18n (0.7.0)
-    json (1.8.3)
+    json (1.8.6)
     minitest (5.10.1)
     multi_json (1.12.1)
+    multipart-post (2.0.0)
     pg (0.19.0)
     rack (1.6.5)
     rack-protection (1.5.3)
@@ -75,8 +87,11 @@ PLATFORMS
 DEPENDENCIES
   activerecord (~> 4.2)
   activesupport (~> 4.2)
+  area
   bcrypt
+  dotenv
   faker
+  forecast_io
   pg
   rake
   rspec

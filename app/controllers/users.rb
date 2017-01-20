@@ -1,55 +1,44 @@
-get 'users' do 
-  @users = User.all
-  erb :index
+get '/users/new' do 
+  erb :'users/new'
 end 
 
-get'/users/new' do
-  erb :'users/new'
-end
-
 post '/users' do
-  @user = User.new(first_name: params[:first_name], last_name: params[:last_name], email: params[:email],hashed_password: params[:hashed_password])
-  @user.password = params[:password]
-
+  @user = User.new(params[:user])
   if @user.save
-    login(@user)
+    session[:user_id] = @user
     redirect "/users/#{@user.id}"
-  else
-    @errors = @user.errors.full_messages
-    redirect '/users/new'
+  else 
+    @errors = ["Username or Email already exists"]
+    redirect 'users/new'
   end
 end
 
-get'/users/:id' do
-  if params[:id].to_i == current_user.id
-    @user = User.find(params[:id])
-    erb :'users/show'
-  else
-    redirect "users/#{current_user.id}"
-  end
+get '/users/:id' do 
+  @user = User.find(params[:id])
+  p current_user
+  p session[:user_id]
+  redirect '/sessions/new' unless current_user
+  erb :'/users/show'
 end
 
-
-get '/users/:id/edit' do
-  @user = User.find(params[:id]) 
+get '/users/:id/edit' do 
+  @user = User.find(params[:id])
   erb :'users/edit'
-end
-
+end 
 
 put '/users/:id' do
   @user = User.find(params[:id])
-  @user.assign_attributes(first_name: params[:first_name])
-  if @user.save 
-    redirect '/users/:id'
+  if params[:password] == ""
+    @user.assign_attributes(email: params[:email], password: @user.password)
   else
-    erb :'users/edit'
+    @user.assign_attributes(email: params[:email], password: params[:password])
   end
+  redirect "/users/#{@user.id}"
 end
 
 
 delete '/users/:id' do
   @user = User.find(params[:id])
-  logout
-  @user.destroy
-  redirect '/'
+  @user.destroy 
+  redirect '/' 
 end

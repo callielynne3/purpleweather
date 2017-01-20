@@ -1,23 +1,24 @@
-<h2>Create an account:</h2>
+<h2 class="page-title">Create an account:</h2>
 
 <form method="post" action="/users">
   <div class="field">
-    <label for="user_first_name">First</label>
-    <input type="text" name="first_name" id="user_first_name" />
+    <label class="page-title" for="user_first_name">First</label>
+    <input type="text" name="user[first_name]" id="user_first_name" />
   </div>
   <div class="field">
-    <label for="user_last_name">Last</label>
-    <input type="text" name="last_name" id="user_last_name" />
+    <label class="page-title" for="user_last_name">Last</label>
+    <input type="text" name="user[last_name]" id="user_last_name" />
   </div>
   <div class="field">
-    <label for="user_email">Email</label>
-    <input type="text" name="email" id="user_email" />
+    <label class="page-title" for="user_email">Email</label>
+    <input type="text" name="user[email]" id="user_email" />
   </div>
   <div class="field">
-    <label for="user_password">Password</label>
-    <input type="password" name="hashed_password" id="user_password" />
+    <label class="page-title" for="user_password">Password</label>
+    <input type="password" name="user[password]" id="user_password" />
   </div>
   <div class="field">
     <input type="submit" value="Create New User"/>
   </div>
 </form>
+

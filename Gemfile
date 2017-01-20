@@ -15,6 +15,9 @@ gem 'rake'
 gem 'bcrypt'
 
 gem 'shotgun'
+gem 'forecast_io'
+gem 'area'
+gem 'dotenv'
 
 group :development, :test do
   gem 'faker'

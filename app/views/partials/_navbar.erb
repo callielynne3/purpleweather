@@ -1,0 +1,26 @@
+<nav id="my-id"class="navbar navbar-default" style="margin-bottom: 0px">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand">Purple Weather</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li><a href="/">Home</a></li>
+      <li><a href="/ryu">Hadouken</a></li>
+      <% if current_user %>
+      <li><a href="/weather_reports/new">New Weather</a></li>
+      <li><a href="/users/<%= current_user.id %>">Profile</a></li>
+        <form class="navbar-form navbar-right" action="/sessions" method="POST"><input name="_method" type="hidden" value="DELETE"><input type="submit" class="btn btn-link" value="Logout"></form>
+      <% else %>
+        <form class="navbar-form navbar-right" action="/sessions/new">
+        <button id="login" type="submit" class="btn btn-link">Login</button>
+        </form> 
+        <form class="navbar-form navbar-right" action="/users/new">
+        <button id="login" type="submit" class="btn btn-link">Sign Up</button>
+        </form> 
+      <% end %>
+    </ul>
+  </div>
+</nav>
+
+
+

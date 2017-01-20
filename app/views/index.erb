@@ -1,3 +1,8 @@
-  <h1>Welcome to purple weather!</h1>
-  <h2>We're here to help you with your daily weather struggle.</h2>
-  <p>Sign up or Log in to get your weather report!</p>
+<div id="my-picture">
+  <% if session[:user_id] %>
+    <h2 id="about">Hi <%= current_user.first_name %>! Welcome to Purple Weather! A way to help you decide what to wear based on temperatures in your area.</h2>
+  <% else %>
+    <h1 id="about">Purple Weather</h1>
+    <h2>A way to help you decide what to wear based on temperatures in your area.</h2>
+  <% end %>
+</div>

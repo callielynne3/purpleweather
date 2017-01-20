@@ -11,6 +11,7 @@ gem 'thin'
 gem 'activesupport', "~>4.2"
 gem 'activerecord', "~>4.2"
 
+gem 'rspec-rails'
 gem 'rake'
 gem 'bcrypt'
 
@@ -21,5 +22,4 @@ gem 'dotenv'
 
 group :development, :test do
   gem 'faker'
-  gem 'rspec'
 end

@@ -12,6 +12,7 @@ gem 'activesupport', "~>4.2"
 gem 'activerecord', "~>4.2"
 
 gem 'rspec-rails'
+gem 'rails_12factor'
 gem 'rake'
 gem 'bcrypt'
 

@@ -1,56 +1,6 @@
-#my-id {
-  background-color: #67407a;
-}
-
-body {
-  width: 100%;
-  height: 100%;
-  text-align: center;
-}
-
-#my-picture {
-  left: 0;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  opacity: .5;
-  background-size: cover;
-  background-image: url("clouds.jpg");
-  background-position: center;
-  background-attachment: fixed;
-  color: white !important;
-}
-
-#about {
-  margin: 0 auto !important;
-  width: 700px;
-  opacity: 1;
-  z-index: 1;
-  color: #fff !important;
-  padding-top: 280px;
-  text-shadow: 2px 2px black;
-}
-
-#move-right {
-  padding: 15px;
-}
-
-.navbar-brand {
-  margin-bottom:0;
-  border:none;
-  color: white !important;
-}
-
-.navbar-brand .glyphicon {
-  margin-right:6px;
-  color: white !important;
-
-}
-
 .login-dark {
   height:1000px;
-  background:#475d62 url(../../puclic/img/star-sky.jpg);
+  background:#475d62 url(../../assets/img/star-sky.jpg);
   background-size:cover;
   position:relative;
 }
@@ -119,3 +69,4 @@ body {
 .login-dark form .btn-primary:active {
   transform:translateY(1px);
 }
+

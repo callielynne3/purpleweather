@@ -1,5 +1,5 @@
 get '/sessions/new' do
-  erb :'/sessions/new'
+  erb :'/users/login.html'
 end
 
 post '/sessions' do
@@ -10,7 +10,7 @@ post '/sessions' do
     redirect "/users/#{@user.id}"
   else 
     @errors = ["Email or password did not match."]
-    erb :'sessions/new'
+    erb :'users/login.html'
   end
 end
 

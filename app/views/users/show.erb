@@ -1,4 +1,4 @@
-<h1>Welcome, <%= @user.first_name%>!</h1>
+<h2>Welcome, <%= @user.first_name%>!</h2>
 <ul style="list-style: none">
 <li id="move-right"><a href="/users/<%= current_user.id%>/edit">Edit Account</a></li>
 <li><form class="delete-account" action="/users/<%= current_user.id %>" method="POST">

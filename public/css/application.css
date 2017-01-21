@@ -6,6 +6,26 @@ body {
   width: 100%;
   height: 100%;
   text-align: center;
+  background-size: cover;
+  background-image: url("weather.jpg");
+  background-position: center;
+  background-attachment: fixed;
+}
+
+#my-div {
+  text-align: left !important;
+}
+
+input {
+  color: gray !important;
+}
+
+.page-title {
+  color: white !important;
+}
+
+h2 {
+  color: white !important;
 }
 
 #my-picture {
@@ -14,9 +34,8 @@ body {
   width: 100%;
   height: 100%;
   z-index: -1;
-  opacity: .5;
   background-size: cover;
-  background-image: url("clouds.jpg");
+  background-image: url("weather.jpg");
   background-position: center;
   background-attachment: fixed;
   color: white !important;

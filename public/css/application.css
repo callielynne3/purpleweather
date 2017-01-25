@@ -17,7 +17,7 @@ body {
 }
 
 input {
-  color: gray !important;
+  color: black !important;
 }
 
 .page-title {
@@ -137,4 +137,8 @@ h2, h3 {
 
 .login-dark form .btn-primary:active {
   transform:translateY(1px);
+}
+
+.weather-span {
+  color: white;
 }
